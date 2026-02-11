@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hardhat files
+/agritrace_chain_bridge/cache
+/agritrace_chain_bridge/artifacts
+/agritrace_chain_bridge/typechain
+/agritrace_chain_bridge/typechain-types
+
+# Solidity coverage files
+/agritrace_chain_bridge/coverage
+/agritrace_chain_bridge/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+/agritrace_chain_bridge/ignition/deployments/chain-31337
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Docker volumes and data (CRITICAL: excludes MySQL socket files)
+docker/volumes/
+docker/data/
+docker/mysql_data/
+
+# PHP vendor directory (optional - uncomment if you want to exclude)
+# api/vendor/
+
+# Uploads directory content (keep directory, ignore files)
+api/uploads/*
+!api/uploads/.gitkeep
+
+# OS files
+Thumbs.db
+.DS_Store

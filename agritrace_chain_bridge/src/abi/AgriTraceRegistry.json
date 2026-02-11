@@ -1,0 +1,33 @@
+﻿[
+  {
+    "inputs": [
+      {"internalType":"string","name":"batchCode","type":"string"},
+      {"internalType":"bytes32","name":"payloadHash","type":"bytes32"}
+    ],
+    "name": "recordBatchCreated",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType":"string","name":"batchCode","type":"string"}
+    ],
+    "name": "getBatchHash",
+    "outputs": [
+      {"internalType":"bytes32","name":"","type":"bytes32"}
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false, "internalType":"string", "name":"batchCode", "type":"string"},
+      {"indexed": false, "internalType":"bytes32", "name":"payloadHash", "type":"bytes32"},
+      {"indexed": false, "internalType":"uint256", "name":"timestamp", "type":"uint256"}
+    ],
+    "name": "BatchCreated",
+    "type": "event"
+  }
+]

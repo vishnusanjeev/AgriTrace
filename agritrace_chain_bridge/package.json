@@ -1,0 +1,22 @@
+﻿{
+  "name": "agritrace-chain-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "bridge:start": "node src/server.js",
+    "hardhat": "hardhat",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "chain:e2e": "hardhat run scripts/e2e_check.js --network localhost"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "hardhat": "^2.22.4"
+  }
+}

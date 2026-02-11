@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "*"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.12"
+        }
+    }
+}
