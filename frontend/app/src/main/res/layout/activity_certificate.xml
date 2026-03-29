@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootCertificate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarCertificate"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        app:navigationIcon="@drawable/ic_arrow_left"
+        app:title="Certificate"
+        app:titleTextColor="#111827"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollCertificate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:fillViewport="true"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbarCertificate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="18dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCertificate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E6EEF6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <TextView
+                        android:id="@+id/tvBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AgriTrace"
+                        android:textColor="#0B3B2E"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Blockchain Verified Certificate"
+                        android:textColor="#6B7280"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tvBrand"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+                        android:id="@+id/divTop"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="14dp"
+                        android:background="#D8F3E6"
+                        app:layout_constraintTop_toBottomOf="@id/tvSub"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/pillVerified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_pill_verified"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        app:layout_constraintTop_toBottomOf="@id/divTop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivVerifiedIcon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_shield_check"
+                            app:tint="#0F9D58"
+                            android:contentDescription="@null"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvVerified"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Verified on Blockchain"
+                            android:textColor="#0F9D58"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/ivVerifiedIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvLabelProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Product"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/pillVerified"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Organic Tomatoes"
+                        android:textColor="#111827"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelProduct"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvLabelBatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Batch ID"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tvProduct"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvBatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="B-2023-001"
+                        android:textColor="#111827"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelBatch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+                        android:id="@+id/divMid"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="18dp"
+                        android:background="#EEF2F6"
+                        app:layout_constraintTop_toBottomOf="@id/tvBatch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/gridMeta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/divMid"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvLabelFarmer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Farmer"
+                            android:textColor="#9CA3AF"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tvLabelHarvest"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvLabelHarvest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Harvest Date"
+                            android:textColor="#9CA3AF"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/tvLabelFarmer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvFarmer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Green Valley Farms"
+                            android:textColor="#111827"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelFarmer"
+                            app:layout_constraintEnd_toStartOf="@id/tvHarvest"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvHarvest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Oct 12, 2023"
+                            android:textColor="#111827"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/tvFarmer"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelHarvest"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvLabelQty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:text="Quantity"
+                            android:textColor="#9CA3AF"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvFarmer"
+                            app:layout_constraintEnd_toStartOf="@id/tvLabelType"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvLabelType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:text="Type"
+                            android:textColor="#9CA3AF"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/tvLabelQty"
+                            app:layout_constraintTop_toBottomOf="@id/tvHarvest"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvQty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="500 kg"
+                            android:textColor="#111827"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelQty"
+                            app:layout_constraintEnd_toStartOf="@id/tvType"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Organic"
+                            android:textColor="#111827"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/tvQty"
+                            app:layout_constraintTop_toBottomOf="@id/tvLabelType"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardQr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#EEF2F6"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:layout_constraintTop_toBottomOf="@id/gridMeta"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tvQrTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Product QR Code"
+                                android:textColor="#111827"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:includeFontPadding="false"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <FrameLayout
+                                android:id="@+id/qrWrap"
+                                android:layout_width="0dp"
+                                android:layout_height="260dp"
+                                android:layout_marginTop="14dp"
+
+                                app:layout_constraintTop_toBottomOf="@id/tvQrTitle"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivQrPlaceholder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:scaleType="fitCenter"
+
+
+                                    android:contentDescription="@null" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/fabQrMini"
+                                    android:layout_width="44dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    app:cardCornerRadius="22dp"
+                                    android:visibility="gone"
+                                    app:cardElevation="8dp"
+                                    app:cardBackgroundColor="#0F9D58"
+                                    app:strokeWidth="0dp">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivFabQr"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_qr_small"
+                                        app:tint="#FFFFFF"
+                                        android:contentDescription="@null" />
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:id="@+id/actionsRow"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/qrWrap"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnSaveQr"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:layout_weight="1"
+                                    android:text="QR Code"
+                                    android:textAllCaps="false"
+                                    android:textColor="#0F9D58"
+                                    android:textSize="14sp"
+                                    android:fontFamily="sans-serif-medium"
+                                    app:icon="@drawable/ic_qr_small"
+                                    app:iconTint="#0F9D58"
+                                    app:iconPadding="10dp"
+                                    app:cornerRadius="16dp"
+                                    android:backgroundTint="@android:color/white"
+                                    app:strokeColor="#0F9D58"
+                                    app:strokeWidth="2dp" />
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="1dp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnShareQr"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:layout_weight="1"
+                                    android:text="Share"
+                                    android:textAllCaps="false"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp"
+                                    android:fontFamily="sans-serif-medium"
+                                    app:icon="@drawable/ic_share"
+                                    app:iconTint="#FFFFFF"
+                                    app:iconPadding="10dp"
+                                    app:cornerRadius="16dp"
+                                    android:backgroundTint="#0F9D58" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvScanHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Scan to verify authenticity"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/cardQr"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/pillBottomVerified"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_pill_bottom_verified"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvScanHint"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBottomCheck"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_check_circle"
+                            app:tint="#0F9D58"
+                            android:contentDescription="@null"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBottomVerified"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Blockchain Verified"
+                            android:textColor="#0B3B2E"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/ivBottomCheck"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvCertId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Certificate ID: CERT- B-2023-001-2023"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/pillBottomVerified"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvIssued"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Issued: October 12, 2023"
+                        android:textColor="#9CA3AF"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tvCertId"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProof"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E6EEF6"
+                app:layout_constraintTop_toBottomOf="@id/cardCertificate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/proofHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/proofIconWrap"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="#E9F2FF"
+                            app:strokeWidth="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivProofIcon"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_mail"
+                                app:tint="#2563EB"
+                                android:contentDescription="@null" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tvProofTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Blockchain Proof"
+                            android:textColor="#1D4ED8"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toEndOf="@id/proofIconWrap"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/proofLine"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#CFE1FF"
+                        app:layout_constraintTop_toBottomOf="@id/proofHeader"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTxLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Transaction ID"
+                        android:textColor="#111827"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/proofLine"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/boxTx"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_input_box"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvTxLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvTxValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="0x7f9fade1c0d57a7af66ab4ead79fade1c0d57a7af66ab4ead7c2c2cb7b11a91385"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:fontFamily="monospace"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btnCopyTx" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/btnCopyTx"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_copy"
+                            app:tint="#2563EB"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvBlockLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Block Hash"
+                        android:textColor="#111827"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:includeFontPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/boxTx"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/boxBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_input_box"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvBlockLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvBlockValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="0x4e3a3754410177e6937ef1f84bba68ea139e8d1a2258c5f85db9f1cd715a1bdd"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:fontFamily="monospace"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btnCopyBlock" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/btnCopyBlock"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_copy"
+                            app:tint="#2563EB"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/gridSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        app:layout_constraintTop_toBottomOf="@id/boxBlock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardBlockNo"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="#CFE1FF"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/cardNetwork"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingStart="14dp"
+                                android:paddingEnd="14dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/tvBlockNoLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Block Number"
+                                    android:textColor="#2563EB"
+                                    android:textSize="12sp"
+                                    android:fontFamily="sans-serif"
+                                    android:includeFontPadding="false"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvBlockNoValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="15,234,567"
+                                    android:textColor="#111827"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:includeFontPadding="false"
+                                    app:layout_constraintTop_toBottomOf="@id/tvBlockNoLabel"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardNetwork"
+                            android:layout_width="0dp"
+                            android:layout_height="88dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="#CFE1FF"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:layout_constraintStart_toEndOf="@id/cardBlockNo"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingStart="14dp"
+                                android:paddingEnd="14dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/tvNetLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Network"
+                                    android:textColor="#2563EB"
+                                    android:textSize="12sp"
+                                    android:fontFamily="sans-serif"
+                                    android:includeFontPadding="false"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvNetValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Ethereum"
+                                    android:textColor="#111827"
+                                    android:textSize="16sp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:includeFontPadding="false"
+                                    app:layout_constraintTop_toBottomOf="@id/tvNetLabel"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvNetValue2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Mainnet"
+                                    android:textColor="#111827"
+                                    android:textSize="16sp"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:includeFontPadding="false"
+                                    app:layout_constraintTop_toBottomOf="@id/tvNetValue"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardTime"
+                        android:layout_width="0dp"
+                        android:layout_height="84dp"
+                        android:layout_marginTop="12dp"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#CFE1FF"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:layout_constraintTop_toBottomOf="@id/gridSmall"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/tvTimeLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Timestamp"
+                                android:textColor="#2563EB"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif"
+                                android:includeFontPadding="false"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvTimeValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="2023-10-12 08:30:15 UTC"
+                                android:textColor="#111827"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:includeFontPadding="false"
+                                app:layout_constraintTop_toBottomOf="@id/tvTimeLabel"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardImmutable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E6EEF6"
+                app:layout_constraintTop_toBottomOf="@id/cardProof"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivImmutable"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_check_badge"
+                        app:tint="#2563EB"
+                        android:contentDescription="@null"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvImmutableTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Immutable Record"
+                        android:textColor="#111827"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        app:layout_constraintStart_toEndOf="@id/ivImmutable"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvImmutableDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="6dp"
+                        android:text="This certificate is permanently recorded on the blockchain and cannot be altered or deleted. The transaction and block hash IDs serve as cryptographic proof of authenticity."
+                        android:textColor="#2563EB"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="2dp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvImmutableTitle"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShareCert"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Share Certificate"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:textSize="16sp"
+
+                android:fontFamily="sans-serif-medium"
+                app:icon="@drawable/ic_share"
+                app:iconTint="#FFFFFF"
+                app:iconPadding="12dp"
+                app:cornerRadius="18dp"
+                android:backgroundTint="#0F9D58"
+                app:layout_constraintTop_toBottomOf="@id/cardImmutable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackBottom"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="#0F9D58"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                app:cornerRadius="18dp"
+                android:backgroundTint="@android:color/white"
+                app:strokeColor="#0F9D58"
+                app:strokeWidth="2dp"
+                app:layout_constraintTop_toBottomOf="@id/btnShareCert"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

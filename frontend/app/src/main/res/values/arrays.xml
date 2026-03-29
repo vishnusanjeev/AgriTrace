@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="farm_types">
+        <item>Select Farm Type</item>
+        <item>Crop Farming</item>
+        <item>Dairy Farming</item>
+        <item>Poultry Farming</item>
+        <item>Organic Farming</item>
+        <item>Mixed Farming</item>
+    </string-array>
+
+    <string-array name="soil_types">
+        <item>Select Soil Type</item>
+        <item>Alluvial Soil</item>
+        <item>Black Soil</item>
+        <item>Red Soil</item>
+        <item>Laterite Soil</item>
+        <item>Sandy Soil</item>
+        <item>Clay Soil</item>
+    </string-array>
+
+    <string-array name="distributor_types">
+        <item>Wholesale</item>
+        <item>Retail</item>
+        <item>Both</item>
+    </string-array>
+</resources>

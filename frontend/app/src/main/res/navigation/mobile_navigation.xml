@@ -1,0 +1,25 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.simats.agritrace.Farmer.HomeFragment"
+        android:label="Home Dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.simats.agritrace.Farmer.AddCropFragment"
+        android:label="Add New Crop" />
+
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="com.simats.agritrace.Farmer.ProductsFragment"
+        android:label="My Batches" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.simats.agritrace.Farmer.ProfileFragment"
+        android:label="Farm Profile" />
+</navigation>

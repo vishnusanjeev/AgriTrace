@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootAddCrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:forceDarkAllowed="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:paddingStart="12dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:forceDarkAllowed="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@null"
+            app:tint="#0F172A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTopTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:text="Register New Crop"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBack"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#EEF2F6"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepperBar"
+        android:layout_width="0dp"
+        android:layout_height="106dp"
+        android:background="#FFFFFF"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:forceDarkAllowed="false"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:id="@+id/step1CircleWrap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_step_circle_active"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/step2CircleWrap"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvStep1Num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivStep1Check"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/step2CircleWrap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_step_circle_inactive"
+            app:layout_constraintStart_toEndOf="@id/step1CircleWrap"
+            app:layout_constraintEnd_toStartOf="@id/step3CircleWrap"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvStep2Num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#4B5563"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivStep2Check"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/step3CircleWrap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_step_circle_inactive"
+            app:layout_constraintStart_toEndOf="@id/step2CircleWrap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvStep3Num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="#4B5563"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivStep3Check"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/line12"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#CBD5E1"
+            app:layout_constraintStart_toEndOf="@id/step1CircleWrap"
+            app:layout_constraintEnd_toStartOf="@id/step2CircleWrap"
+            app:layout_constraintTop_toTopOf="@id/step1CircleWrap"
+            app:layout_constraintBottom_toBottomOf="@id/step1CircleWrap" />
+
+        <View
+            android:id="@+id/line23"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#CBD5E1"
+            app:layout_constraintStart_toEndOf="@id/step2CircleWrap"
+            app:layout_constraintEnd_toStartOf="@id/step3CircleWrap"
+            app:layout_constraintTop_toTopOf="@id/step2CircleWrap"
+            app:layout_constraintBottom_toBottomOf="@id/step2CircleWrap" />
+
+        <TextView
+            android:id="@+id/tvStep1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:text="Basic Info"
+            android:textColor="#0B8B5B"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/step1CircleWrap"
+            app:layout_constraintStart_toStartOf="@id/step1CircleWrap"
+            app:layout_constraintEnd_toEndOf="@id/step1CircleWrap" />
+
+        <TextView
+            android:id="@+id/tvStep2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:text="Details"
+            android:textColor="#64748B"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/step2CircleWrap"
+            app:layout_constraintStart_toStartOf="@id/step2CircleWrap"
+            app:layout_constraintEnd_toEndOf="@id/step2CircleWrap" />
+
+        <TextView
+            android:id="@+id/tvStep3Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:text="Confirm"
+            android:textColor="#64748B"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/step3CircleWrap"
+            app:layout_constraintStart_toStartOf="@id/step3CircleWrap"
+            app:layout_constraintEnd_toEndOf="@id/step3CircleWrap" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:background="#FFFFFF"
+        android:forceDarkAllowed="false"
+        app:layout_constraintTop_toBottomOf="@id/stepperBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="22dp">
+
+            <android.widget.ViewFlipper
+                android:id="@+id/flipperSteps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autoStart="false"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pageStep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:forceDarkAllowed="false">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardStep1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        app:strokeColor="#EEF2F6"
+                        app:strokeWidth="1dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/tvCropNameLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:text="Crop Name"
+                                android:textColor="#334155"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etCropName"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_field_outline"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:hint="e.g. Organic Tomatoes"
+                                android:inputType="textCapWords"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:textColor="#0F172A"
+                                android:textColorHint="#CBD5E1"
+                                android:textSize="16sp"
+                                app:layout_constraintTop_toBottomOf="@id/tvCropNameLabel"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvCategoryLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Category"
+                                android:textColor="#334155"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:layout_constraintTop_toBottomOf="@id/etCropName"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/categoryField"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_field_outline"
+                                app:layout_constraintTop_toBottomOf="@id/tvCategoryLabel"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/actCategory"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:dropDownVerticalOffset="8dp"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center_vertical"
+                                    android:hint="Vegetables"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="48dp"
+                                    android:text="Vegetables"
+                                    android:textColor="#0F172A"
+                                    android:textColorHint="#CBD5E1"
+                                    android:textSize="16sp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/ivCategoryDrop"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:src="@drawable/ic_chevron_down"
+                                    android:contentDescription="@null"
+                                    app:tint="#0F172A"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/tvQtyLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Quantity (kg)"
+                                android:textColor="#334155"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:layout_constraintTop_toBottomOf="@id/categoryField"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etQuantity"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_field_outline"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:hint="0.00"
+                                android:inputType="numberDecimal"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:textColor="#0F172A"
+                                android:textColorHint="#CBD5E1"
+                                android:textSize="16sp"
+                                app:layout_constraintTop_toBottomOf="@id/tvQtyLabel"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvHarvestLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Harvest Date"
+                                android:textColor="#334155"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                app:layout_constraintTop_toBottomOf="@id/etQuantity"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/harvestField"
+                                android:layout_width="0dp"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_field_outline"
+                                app:layout_constraintTop_toBottomOf="@id/tvHarvestLabel"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tvHarvestDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="48dp"
+                                    android:text="mm/dd/yyyy"
+                                    android:textColor="#0F172A"
+                                    android:textSize="16sp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/ivCalendar"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginEnd="14dp"
+                                    android:src="@drawable/ic_calendar"
+                                    android:contentDescription="@null"
+                                    app:tint="#0F172A"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNextStep"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Next Step"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#0B8B5B"
+                        app:cornerRadius="28dp"
+                        app:rippleColor="#1AFFFFFF"
+                        app:layout_constraintTop_toBottomOf="@id/cardStep1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ViewStub
+                    android:id="@+id/stubStep2"
+                    android:inflatedId="@+id/pageStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/fragment_add_crop_step2" />
+
+                <ViewStub
+                    android:id="@+id/stubStep3"
+                    android:inflatedId="@+id/pageStep3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/fragment_add_crop_step3" />
+
+            </android.widget.ViewFlipper>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

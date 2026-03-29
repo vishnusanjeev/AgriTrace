@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="Theme.AgriTrace" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#2E3440</item>
+        <item name="colorPrimary">#129B63</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="android:windowAnimationStyle">@style/AppWindowAnimations</item>
+       <item name="android:forceDarkAllowed">false</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>

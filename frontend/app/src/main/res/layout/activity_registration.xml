@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootCreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="22dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/backHitArea"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_back"
+                    app:tint="#111827" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Create Account"
+                android:textColor="#111827"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/backHitArea"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/subtitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Join the transparent agricultural network."
+                android:textColor="#6B7280"
+                android:textSize="14sp"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/fullNameLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Full Name"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/subtitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/fullNameLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_outline"
+                    android:hint="Enter your full name"
+                    android:inputType="textPersonName"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="name"
+                    android:paddingStart="14dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Email Address"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/fullNameInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/emailLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_outline"
+                    android:hint="name@example.com"
+                    android:inputType="textEmailAddress"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="emailAddress"
+                    android:paddingStart="14dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/mobileLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Mobile Number"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobileInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/mobileLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobileInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_outline"
+                    android:hint="Enter your mobile number"
+                    android:inputType="phone"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="phone"
+                    android:paddingStart="14dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Password"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/mobileInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#6B7280"
+                app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_outline"
+                    android:hint="Create a strong password"
+                    android:inputType="textPassword"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="password"
+                    android:paddingStart="14dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="14dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/roleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Select your role"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/passwordInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/roleGrid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:columnCount="2"
+                app:layout_constraintTop_toBottomOf="@id/roleLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:useDefaultMargins="false">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/roleFarmer"
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:text="Farmer"
+                    android:textAllCaps="false"
+                    android:textColor="#111827"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#F0FDF4"
+                    app:layout_columnWeight="1"
+                    app:strokeColor="#DCFCE7"
+                    app:strokeWidth="1dp"
+                    app:icon="@drawable/ic_farmer"
+                    app:iconTint="#16A34A"
+                    app:iconGravity="textTop"
+                    app:iconPadding="10dp"
+                    app:iconSize="28dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/roleDistributor"
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_marginBottom="10dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:text="Distributor"
+                    android:textAllCaps="false"
+                    android:textColor="#111827"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#EFF6FF"
+                    app:layout_columnWeight="1"
+                    app:strokeColor="#DBEAFE"
+                    app:strokeWidth="1dp"
+                    app:icon="@drawable/distributor"
+                    app:iconTint="#2563EB"
+                    app:iconGravity="textTop"
+                    app:iconPadding="10dp"
+                    app:iconSize="28dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/roleRetailer"
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_marginEnd="10dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:text="Retailer"
+                    android:textAllCaps="false"
+                    android:textColor="#111827"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#FFFBEB"
+                    app:layout_columnWeight="1"
+                    app:strokeColor="#FEF3C7"
+                    app:strokeWidth="1dp"
+                    app:icon="@drawable/retailer"
+                    app:iconTint="#D97706"
+                    app:iconGravity="textTop"
+                    app:iconPadding="10dp"
+                    app:iconSize="28dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/roleConsumer"
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="12dp"
+                    android:text="Consumer"
+                    android:textAllCaps="false"
+                    android:textColor="#111827"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#F5F3FF"
+                    app:layout_columnWeight="1"
+                    app:strokeColor="#EDE9FE"
+                    app:strokeWidth="1dp"
+                    app:icon="@drawable/consumer"
+                    app:iconTint="#7C3AED"
+                    app:iconGravity="textTop"
+                    app:iconPadding="10dp"
+                    app:iconSize="28dp" />
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createAccountButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="16dp"
+                app:backgroundTint="#059669"
+                app:rippleColor="#22FFFFFF"
+                app:layout_constraintTop_toBottomOf="@id/roleGrid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/loginPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Already have an account?"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/createAccountButton"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/loginAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Log in"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#059669"
+                android:includeFontPadding="false"
+                app:layout_constraintBaseline_toBaselineOf="@id/loginPrompt"
+                app:layout_constraintStart_toEndOf="@id/loginPrompt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

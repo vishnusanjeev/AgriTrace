@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/retailerDashboardFragment"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_retailer_home" />
+
+    <item
+        android:id="@+id/retailerScanFragment"
+        android:title="Scan QR"
+        android:icon="@drawable/ic_retailer_scan" />
+
+    <item
+        android:id="@+id/retailerHistoryFragment"
+        android:title="History"
+        android:icon="@drawable/ic_retailer_history" />
+
+    <item
+        android:id="@+id/retailerProfileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_retailer_profile" />
+
+</menu>
