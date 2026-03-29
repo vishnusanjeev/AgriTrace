@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/customerHomeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/customerScanFragment"
+        android:title="Scan"
+        android:icon="@drawable/ic_scan_qr" />
+
+    <item
+        android:id="@+id/customerHistoryFragment"
+        android:title="History"
+        android:icon="@drawable/ic_history" />
+
+    <item
+        android:id="@+id/customerProfileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_nav_profile" />
+
+
+</menu>

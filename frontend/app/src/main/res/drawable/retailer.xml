@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+
+    <!-- shop body -->
+    <path
+        android:pathData="M7.8,12.0 H20.2 V20.6 C20.2,21.6 19.4,22.4 18.4,22.4 H9.6 C8.6,22.4 7.8,21.6 7.8,20.6 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#0B0B0B"
+        android:strokeWidth="2.8"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round" />
+
+    <!-- roof -->
+    <path
+        android:pathData="M9.2,12.0 L10.9,7.9 H17.1 L18.8,12.0"
+        android:fillColor="#00000000"
+        android:strokeColor="#0B0B0B"
+        android:strokeWidth="2.8"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round" />
+
+    <!-- awning scallops -->
+    <path
+        android:pathData="M7.9,12.0 C8.7,13.4 10.1,13.4 10.9,12.0 C11.7,13.4 13.1,13.4 13.9,12.0 C14.7,13.4 16.1,13.4 16.9,12.0 C17.7,13.4 19.1,13.4 19.9,12.0"
+        android:fillColor="#00000000"
+        android:strokeColor="#0B0B0B"
+        android:strokeWidth="2.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- door -->
+    <path
+        android:pathData="M12.0,22.4 V17.4 C12.0,16.5 12.7,15.8 13.6,15.8 H14.4 C15.3,15.8 16.0,16.5 16.0,17.4 V22.4"
+        android:fillColor="#00000000"
+        android:strokeColor="#0B0B0B"
+        android:strokeWidth="2.8"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round" />
+
+</vector>

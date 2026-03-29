@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retailer_nav_graph"
+    app:startDestination="@id/retailerDashboardFragment">
+
+    <fragment
+        android:id="@+id/retailerDashboardFragment"
+        android:name="com.simats.agritrace.retailer.RetailerDashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/retailerScanFragment"
+        android:name="com.simats.agritrace.retailer.RetailerScanQrFragment"
+        android:label="Scan" />
+
+    <fragment
+        android:id="@+id/retailerHistoryFragment"
+        android:name="com.simats.agritrace.retailer.RetailerHistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/retailerProfileFragment"
+        android:name="com.simats.agritrace.retailer.RetailerProfileFragment"
+        android:label="Profile" />
+
+</navigation>
